@@ -1,11 +1,13 @@
 <?php require_once 'config.php'; ?>
 <?php require_once DBAPI; ?>
 
+
+<!-- INCLUI O CABEÇALHO DA PÁGINA -->
 <?php include(HEADER_TEMPLATE); ?>
 <?php $db = open_database(); ?>
 
 
-
+<!-- TELA PRINCIPAL -->
 	<div class="row">
 		<div class="text-center">
 		<h1>Controle de Atividades:</h1>
@@ -15,6 +17,7 @@
 
 <?php if ($db) : ?>
 
+<!-- BOTÕES PARA DIRECIONAMENTO DAS ATIVIDADES DO SISTEMA -->
 <div class="row">
 
 	<div class="col-xs-6 col-sm-3 col-md-2">
@@ -59,7 +62,6 @@
  					 <path fill-rule="evenodd" d="M7 5.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0zM7 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z"/>
 				</svg>
 
-
 				</div>
 				<div class="col-xs-12 text-center">
 					<p>Atividades Concluídas</p>
@@ -77,4 +79,5 @@
 
 <?php endif; ?>
 
+<!-- INCLUI O RODAPÉ DA PÁGINA -->
 <?php include(FOOTER_TEMPLATE); ?>

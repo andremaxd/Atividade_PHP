@@ -11,9 +11,10 @@ $atividade = null;
 $atividades_concluidas = array();
 $atividades_abertas = array();
 
-/**
- *  Listagem de Atividades
- */
+
+//Listagem das Atividades
+ 
+//CRIA A FUNÇÃO DO PARA O INDEX
 function index() {
   global $atividades;
   global $atividades_concluidas;
@@ -35,9 +36,7 @@ function index() {
 }
 
 
-/**
- *  Cadastro de Clientes
- */
+//FUNÇÃO PARA O CADASTRO DAS ATIVIDADES
 function add() {
 
     if (!empty($_POST['atividade'])) {
@@ -68,11 +67,8 @@ function add() {
       }
       date_default_timezone_set ('America/Sao_Paulo');
       if ($atv[0] == 'Manutenção Urgente' && intval(date('H')) > 13 && intval(date('w')) == 5) {
-        //echo "<script type='javascript'>alert('Email enviado com Sucesso!');";
-        // alert('Não podem ser abertas Manutenções Ugentes após as 13Hrs de Sexta-Feira!');
         $_SESSION['message'] = "Não podem ser abertas Manutenções Ugentes após as 13Hrs de Sexta-Feira!";
         $_SESSION['type'] = 'warning';
-        //header('location: #');
       }else{
         save('atividades', $atividade);
         if ($temProblema) {
@@ -87,9 +83,7 @@ function add() {
 
 
   
-/**
- *	Atualizacao/Edicao de Cliente
- */
+//FUNÇÃO QUE ATULIZA E EDITA AS ATIVIDADES
 function edit() {
 
     $now = date_create('now', new DateTimeZone('America/Sao_Paulo'));
@@ -124,11 +118,8 @@ function edit() {
 
       date_default_timezone_set ('America/Sao_Paulo');
       if ($atv[0] == 'Manutenção Urgente' && intval(date('H')) > 13 && intval(date('w')) == 5) {
-        //echo "<script type='javascript'>alert('Email enviado com Sucesso!');";
-        // alert('Não podem ser abertas Manutenções Ugentes após as 13Hrs de Sexta-Feira!');
         $_SESSION['message'] = "Não podem ser abertas Manutenções Ugentes após as 13Hrs de Sexta-Feira!";
         $_SESSION['type'] = 'warning';
-        //header('location: #');
       } else{
 
         update('atividades', $id, $atividade);
@@ -163,7 +154,6 @@ function concluir($id = null) {
   global $atividade;
   $atividade = find('atividades', $id);
 
-  //$atividade['modified'] = $now->format("Y-m-d H:i:s");
   $atividade['conc'] = true;
 
   session_start();

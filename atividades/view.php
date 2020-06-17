@@ -3,6 +3,9 @@
 	view($_GET['id']);
 ?>
 
+<!-- VIEW PARA A VISUALIZAÇÃO DAS ATIVIDADES -->
+
+
 <?php include(HEADER_TEMPLATE); ?>
 
 <h2>Atividade <?php echo $atividade['id']; ?></h2>

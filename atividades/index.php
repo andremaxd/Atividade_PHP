@@ -3,6 +3,7 @@
     index();
 ?>
 
+<!-- INCLUI O CABEÇALHO DA PÁGINA -->
 <?php include(HEADER_TEMPLATE); ?>
 
 <header>
@@ -11,11 +12,13 @@
 			<h2>Atividades Abertas:</h2>
 		</div>
 		<div class="col-sm-6 text-right h2">
-	    	<a class="btn btn-primary" href="add.php"><i class="fa fa-plus"></i> Nova Atividade</a>
-	    	<a class="btn btn-default" href="index.php"><i class="fa fa-refresh"></i> Atualizar</a>
+	    	<a class="btn btn-primary" href="add.php"><i class="fa fa-plus"></i> Nova Atividade</a> <!-- CRIA NOVA ATIVIDADE -->
+	    	<a class="btn btn-default" href="index.php"><i class="fa fa-refresh"></i> Atualizar</a> <!-- ATUALIZA A PAGINA -->
 	    </div>
 	</div>
 </header>
+
+<!-- MENSAGEM -->
 <?php if (!empty($_SESSION['message'])) : ?>
 	<div class="alert alert-<?php echo $_SESSION['type']; ?> alert-dismissible" role="alert">
 		<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -26,6 +29,7 @@
 
 <hr>
 
+<!-- CAMPOS A SEREM EXIBIDOS -->
 <table class="table table-borderless">
 <thead >
 	<tr class="text-align-center">
@@ -83,7 +87,9 @@
 </tbody>
 </table>
 
+<!-- INCLUI OS MODALS PARA A REALIZAÇÃO DA EXCLUSÃO OU CONCLUSÃO DAS ATIVIDADES -->
 <?php include('modal.php'); ?>
 <?php include('modal_concluir.php'); ?>
 
+<!-- INCLUI O TEMPLATE DO RODAPÉ DA PÁGINA -->
 <?php include(FOOTER_TEMPLATE); ?>

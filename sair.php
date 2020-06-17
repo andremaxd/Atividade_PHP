@@ -1,3 +1,5 @@
+<!-- LIMPA TODOS OS CAMPOS PARA ENCERRAR A SESSÃO -->
+
 <?php
     session_start();   
     unset(

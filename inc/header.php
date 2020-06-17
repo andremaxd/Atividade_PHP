@@ -1,3 +1,4 @@
+<!-- INCLUI DO CABEÇALHO PADRÃO DA PÁGINA -->
 
   <?php  
   if(!isset($_SESSION)) { session_start(); }
@@ -48,6 +49,8 @@
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                     Atividades <span class="caret"></span>
                 </a>
+
+                <!-- CRIA UM MENU NA BARRA INICIAL PARA ADD, VISUALIZAR AS ATIVIDADES -->
                 <ul class="dropdown-menu">
                     <li><a href="<?php echo BASEURL; ?>atividades/index.php">Atividades Abertas</a></li>
                     <li><a href="<?php echo BASEURL; ?>atividades/index_con.php">Atividades Concluídas</a></li>                    
@@ -55,6 +58,8 @@
                 </ul>
             </li>
           </ul>
+
+          <!-- INCLUI O NOME DO USUÁRIO E BOTÃO PARA SAIR DO SISTEMA -->
           <span class="navbar-brand" style="float: right"><?php echo $_SESSION['usuarioNome'] ?> 
             <a href="<?php echo BASEURL; ?>sair.php"><i class='fas fa-power-off' style='font-size:24px'></i></a>
           </span>

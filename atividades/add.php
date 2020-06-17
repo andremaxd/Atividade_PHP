@@ -3,6 +3,8 @@
   add();
 ?>
 
+<!-- INCLUI O CABEÇALHO DA PÁGINA -->
+
 <?php include(HEADER_TEMPLATE); ?>
   <div class="row">
 		<div class="text-center">
@@ -10,7 +12,8 @@
     </div>
   </div>
 
-  <?php if (!empty($_SESSION['message'])) : ?>
+<!-- INCLUI A MENSAGEM -->
+<?php if (!empty($_SESSION['message'])) : ?>
 	<div class="alert alert-<?php echo $_SESSION['type']; ?> alert-dismissible" role="alert">
 		<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 		<?php echo $_SESSION['message']; ?>
@@ -18,13 +21,14 @@
 	<?php clear_messages(); ?>
 <?php endif; ?>
 
+<!-- ADD UM METODO POST PARA ENVIO DAS INFORMAÇÕES SALVAS -->
 <form action="add.php" method="post">
 
 <?php
 date_default_timezone_set ('America/Sao_Paulo');?>
-  <!-- area de campos do form -->
+  
   <hr />
-
+<!-- FORMULÁRIO PARA INSERÇÃO DAS INFORMAÇÕES -->
     <div class="form-group">
       <label for="exampleFormControlSelect1">Tipo de Atividade</label>
       <select type="text" class="form-control" id="exampleFormControlSelect1" name="atividade['tipo_atv']">
@@ -44,15 +48,7 @@ date_default_timezone_set ('America/Sao_Paulo');?>
       <label for="descricao">Descrição</label>
       <textarea type="textarea" class="form-control" rows="3" name="atividade['descricao']"></textarea>
     </div>
-<!--
-    <div class="form-group col-md-3">
-          <label for="exampleFormControlSelect1">Concluído:</label>
-          <select type="text" class="form-control" id="exampleFormControlSelect1" name="atividade['concluido']">
-            <option>Não</option>
-            <option>Sim</option>
-          </select>
-    </div>
-   --> 
+
     <div class="form-group col-md-2">
       <input type="checkbox" name="concluido"> Concluído
     </div>   
@@ -70,4 +66,5 @@ date_default_timezone_set ('America/Sao_Paulo');?>
   </div>
 </form>
 
+<!-- INCLUI O TEMPLATE DO RODAPÉ DA PÁGINA -->
 <?php include(FOOTER_TEMPLATE); ?>
