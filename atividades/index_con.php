@@ -9,7 +9,7 @@
 <header>
 	<div class="row">
 		<div class="col-sm-6 text-center">
-			<h2>Atividades Concluídas:</h2>
+			<h2>Atividades Concluídas</h2>
 </header>
 
 <!-- MENSAGEM -->

@@ -10,7 +10,7 @@
 
 <div class="row">
 		<div class="text-center">
-      <h2>Editar Atividades:</h2>
+      <h2>Editar Atividades</h2>
     </div>
   </div>
 

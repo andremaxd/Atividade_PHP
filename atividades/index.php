@@ -9,7 +9,7 @@
 <header>
 	<div class="row">
 		<div class="col-sm-6 text-center">
-			<h2>Atividades Abertas:</h2>
+			<h2>Atividades Abertas</h2>
 		</div>
 		<div class="col-sm-6 text-right h2">
 	    	<a class="btn btn-primary" href="add.php"><i class="fa fa-plus"></i> Nova Atividade</a> <!-- CRIA NOVA ATIVIDADE -->

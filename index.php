@@ -10,7 +10,7 @@
 <!-- TELA PRINCIPAL -->
 	<div class="row">
 		<div class="text-center">
-		<h1>Controle de Atividades:</h1>
+		<h1>Controle de Atividades</h1>
     </div>
   </div>
 <hr />
