@@ -21,9 +21,7 @@
 <form action="add.php" method="post">
 
 <?php
-date_default_timezone_set ('America/Sao_Paulo');
-
-echo  intval(date('w')) ?>
+date_default_timezone_set ('America/Sao_Paulo');?>
   <!-- area de campos do form -->
   <hr />
 

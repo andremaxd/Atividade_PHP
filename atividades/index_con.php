@@ -38,15 +38,30 @@
 		<td><?php echo $atividade['id']; ?></td>
 		<td><?php echo $atividade['tipo_atv']; ?></td>
 		<td><?php echo $atividade['titulo']; ?></td>
-        <td><?php echo $atividade['concluido']; ?></td>
+
+
+		<td>
+			<?php if ($atividade['conc']): ?>
+				<span>Sim</span>
+			<?php else: ?>
+				<span>Não</span>
+			<?php endif; ?>
+		</td>
 		
 		<td><?php echo $atividade['modified']; ?></td>
 		<td width="13%" class="actions text-right">
 			<a href="view.php?id=<?php echo $atividade['id']; ?>" title="Visualizar" class="btn btn-sm btn-success"><i class="fa fa-eye"></i> </a>
 			<a href="edit.php?id=<?php echo $atividade['id']; ?>" title="Editar" class="btn btn-sm btn-warning"><i class="fa fa-cog"></i> </a>
-			<a href="#" class="btn btn-sm btn-danger" title="Excluir" data-toggle="modal" data-target="#delete-modal" data-atividades="<?php echo $atividade['id']; ?>">
+			<!-- <a href="#" class="btn btn-sm btn-danger" title="Excluir" data-toggle="modal" data-target="#delete-modal" data-atividades="<?php echo $atividade['id']; ?>">
 				<i class="fa fa-trash"></i> 
-			</a>
+			</a> -->
+			<?php if ($atividade['tipo_atv'] != 'Manutenção Urgente'): ?>
+				<a href="#" class="btn btn-sm btn-danger" data-toggle="modal" title="Excluir" data-target="#delete-modal" data-atividades="<?php echo $atividade['id']; ?>">
+				<i class="fa fa-trash"></i>
+				</a>
+			<?php else: ?>
+				
+			<?php endif; ?>
 		</td>
 	</tr>
 <?php endforeach; ?>

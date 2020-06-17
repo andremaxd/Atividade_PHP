@@ -21,12 +21,14 @@ function index() {
 
   $atividades = find_all('atividades');
   
-  foreach ($atividades as &$atv) {
-    if ($atv['conc']){
-      array_push($atividades_concluidas, $atv);
-    } else {
-      array_push($atividades_abertas, $atv);
-    }
+  if($atividades){
+    foreach ($atividades as &$atv) {
+      if ($atv['conc']){
+        array_push($atividades_concluidas, $atv);
+      } else {
+        array_push($atividades_abertas, $atv);
+      }
+  }
 }
 
 

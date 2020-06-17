@@ -30,7 +30,7 @@ session_start();
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header ">
-            <h1 class="text-warning" style="color: #e1e3e6" >Acesso ao Sistema de Gestão de Tarefas</h1>
+            <h1 class="text-warning" style="color: #e1e3e6" >Acesso ao Sistema de Gestão de Atividades</h1>
         </div>
       </div>
     </nav>
