@@ -59,7 +59,8 @@
 			<?php endif; ?>
 		</td>
 		
-		<td><?php echo $atividade['modified']; ?></td>
+		<td><?php echo date("d/m/Y H:i:s", strtotime($atividade['modified']));  ?></td>
+
 		<td width="19%" class="actions text-right">
 			<a href="#" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#concluir-modal" data-atividades="<?php echo $atividade['id']; ?>">
 					<i class="fa fa-lock"></i> Concluir</a>

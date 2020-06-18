@@ -52,7 +52,7 @@
 			<?php endif; ?>
 		</td>
 		
-		<td><?php echo $atividade['modified']; ?></td>
+		<td><?php echo date("d/m/Y H:i:s", strtotime($atividade['modified'])); ?></td>
 		<td width="13%" class="actions text-right">
 			<a href="view.php?id=<?php echo $atividade['id']; ?>" title="Visualizar" class="btn btn-sm btn-success"><i class="fa fa-eye"></i> </a>
 			<a href="edit.php?id=<?php echo $atividade['id']; ?>" title="Editar" class="btn btn-sm btn-warning"><i class="fa fa-cog"></i> </a>

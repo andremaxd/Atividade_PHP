@@ -44,7 +44,7 @@ session_start();
 <!-- FORMULÁRIO PARA LOGIN -->
   <form method="POST" action="valida.php">
       <div class="col text-center">
-        <h2 class="form-group">Identifique-se para acesso:</h2>
+        <h2 class="form-group">Identifique-se para acesso</h2>
       </div>
 
       <div class="form-group">

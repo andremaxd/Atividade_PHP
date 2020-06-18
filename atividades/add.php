@@ -8,7 +8,7 @@
 <?php include(HEADER_TEMPLATE); ?>
   <div class="row">
 		<div class="text-center">
-      <h2>Nova Atividade:</h2>
+      <h2>Nova Atividade</h2>
     </div>
   </div>
 
