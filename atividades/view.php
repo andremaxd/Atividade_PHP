@@ -37,7 +37,7 @@
 
 <dl class="dl-horizontal">
 	<dt>Data de Cadastro:</dt>
-	<dd><?php echo $atividade['created']; ?></dd>
+	<dd><?php echo date("d/m/Y H:i:s", strtotime($atividade['modified'])); ?></dd>
 </dl>
 
 
