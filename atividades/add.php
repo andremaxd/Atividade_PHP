@@ -55,7 +55,7 @@ date_default_timezone_set ('America/Sao_Paulo');?>
 
     <div class="form-group col-md-3">
       <label for="campo3">Data de Cadastro:</label>
-      <input type="text" class="form-control" placeholder="aaaa/mm/dd hh:mm:ss" name="atividade['created']" disabled>
+      <input type="text" class="form-control" placeholder="dd/mm/aaaa hh:mm:ss" name="atividade['created']" disabled>
     </div>
  
     <div id="actions" class="row">

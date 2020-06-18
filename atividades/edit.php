@@ -66,7 +66,7 @@
 
     <div class="form-group col-md-3">
       <label for="campo3">Data da Criação:</label>
-      <input type="text" class="form-control" placeholder="aaaa/mm/dd hh:mm:ss" name="atividade['created']" disabled value="<?php echo $atividade['created']; ?>">
+      <input type="text" class="form-control" placeholder="dd/mm/aaaa hh:mm:ss" name="atividade['created']" disabled value="<?php echo date("d/m/Y H:i:s", strtotime($atividade['modified'])); ?>">
     </div>
 
     </div>
